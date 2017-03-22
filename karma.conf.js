@@ -10,7 +10,11 @@ module.exports = function(config){
     frameworks: ['mocha'],
     // The test files we want to be executed.
     // Specified globbing pattern to match all files inside subfolders inside /tests/ where their name finishes in .test.jsx
-    files: ['app/tests/**/*.test.jsx'],
+    files: [
+      'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/foundation-sites/dist/js/foundation.min.js',
+      'app/tests/**/*.test.jsx'
+    ],
     // Preprocesors specify the things we want to do with our test files.
     preprocessors: {
       'app/tests/**/*.test.jsx': ['webpack', 'sourcemap']
